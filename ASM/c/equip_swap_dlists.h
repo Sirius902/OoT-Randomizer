@@ -4,5 +4,6 @@
 #include <n64.h>
 
 extern Gfx deku_stick_dlist[];
+extern Gfx bunny_hood_dlist[];
 
 #endif
