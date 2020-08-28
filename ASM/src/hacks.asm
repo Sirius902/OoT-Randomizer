@@ -1666,3 +1666,12 @@ skip_GS_BGS_text:
 .orga 0xCC8594
     jal     demo_effect_medal_init
     addiu   t8, zero, 0x0006
+
+;==================================================================================================
+; Equip Swap Display Lists
+;==================================================================================================
+; Deku Stick
+; Replaces: lui     t2, 0x0600
+;           addiu   t2, t2, 0x6CC0
+.orga 0xAF180C
+    la t2, deku_stick_dlist
