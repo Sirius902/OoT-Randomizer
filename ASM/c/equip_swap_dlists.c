@@ -12,7 +12,7 @@
 #define D_0C000000 ((Gfx*)     0x0C000000)
 #define D_0D0001C0 ((void*)    0x0D0001C0)
 
-Vtx deku_stick_verts[] = {
+Vtx deku_stick_verts1[] = {
     VTX(1, 1289, -119, 342, 246, 0x16, 0xFF, 0x8B, 0xFF),
     VTX(-19, 3934, -151, -124, 464, 0x2F, 0xFD, 0x92, 0xFF),
     VTX(84, 1289, -24, 320, 208, 0x77, 0x02, 0xF8, 0xFF),
@@ -36,6 +36,9 @@ Vtx deku_stick_verts[] = {
     VTX(88, 5604, 120, -448, 548, 0x71, 0x02, 0x26, 0xFF),
     VTX(88, 5476, -228, -426, 537, 0x62, 0xFD, 0xBC, 0xFF),
     VTX(88, 5476, -228, -426, 537, 0xCA, 0x14, 0x97, 0xFF),
+};
+
+Vtx deku_stick_verts2[] = {
     VTX(-27, 5366, -191, 0, 512, 0x94, 0x0F, 0xCE, 0xFF),
     VTX(-27, 5494, 82, 0, 512, 0x8D, 0x11, 0x1E, 0xFF),
     VTX(88, 5604, 120, 0, 512, 0xC6, 0x18, 0x66, 0xFF),
@@ -62,7 +65,7 @@ Gfx deku_stick_dlist[] = {
     gsSPSetGeometryMode(G_FOG | G_LIGHTING),
     gsSPDisplayList(D_0C000000),
     gsDPSetPrimColor(0, 0, 247, 164, 109, 255),
-    gsSPVertex(&deku_stick_verts[0], 23, 0),
+    gsSPVertex(deku_stick_verts1, 23, 0),
     gsSP2Triangles(0, 1, 2, 0, 3, 4, 5, 0),
     gsSP2Triangles(6, 4, 3, 0, 7, 5, 8, 0),
     gsSP2Triangles(7, 3, 5, 0, 0, 8, 1, 0),
@@ -82,7 +85,7 @@ Gfx deku_stick_dlist[] = {
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_OFF),
     gsDPSetCombineLERP(SHADE, 0, PRIMITIVE, 0, 0, 0, 0, 1, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 0, 255, 255, 127, 255),
-    gsSPVertex(&deku_stick_verts[23], 13, 0),
+    gsSPVertex(deku_stick_verts2, 13, 0),
     gsSP2Triangles(0, 1, 2, 0, 3, 4, 5, 0),
     gsSP2Triangles(6, 4, 3, 0, 0, 2, 7, 0),
     gsSP2Triangles(8, 9, 3, 0, 10, 11, 12, 0),
