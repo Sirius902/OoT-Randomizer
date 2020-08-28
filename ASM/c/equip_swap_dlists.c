@@ -6,7 +6,7 @@
 #define VTX(x,y,z,s,t,crnx,cgny,cbnz,a) { { { x, y, z }, 0, { s, t }, { crnx, cgny, cbnz, a } } }
 
 // Deku Stick texture
-#define D_04001A00 ((int32_t*) 0x04001A00)
+#define D_04001A00 ((uint8_t*) 0x04001A00)
 #define D_0B000000 ((void*)    0x0B000000)
 #define D_0B000040 ((void*)    0x0B000040)
 #define D_0C000000 ((Gfx*)     0x0C000000)
