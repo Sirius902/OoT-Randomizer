@@ -5,9 +5,12 @@
 
 #define VTX(x,y,z,s,t,crnx,cgny,cbnz,a) { { { x, y, z }, 0, { s, t }, { crnx, cgny, cbnz, a } } }
 
-// texture
+// Deku Stick texture
 #define D_04001A00 ((int32_t*) 0x04001A00)
+#define D_0B000000 ((void*)    0x0B000000)
+#define D_0B000040 ((void*)    0x0B000040)
 #define D_0C000000 ((Gfx*)     0x0C000000)
+#define D_0D0001C0 ((void*)    0x0D0001C0)
 
 Vtx deku_stick_verts[] = {
     VTX(1, 1289, -119, 342, 246, 0x16, 0xFF, 0x8B, 0xFF),
@@ -356,7 +359,7 @@ Vtx bunny_hood_verts[] = {
 };
 
 Gfx bunny_hood_dlist[] = {
-    gsSPMatrix(0x0D0001C0, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
+    gsSPMatrix(D_0D0001C0, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -389,12 +392,12 @@ Gfx bunny_hood_dlist[] = {
     gsSP2Triangles(0, 1, 2, 0, 3, 4, 0, 0),
     gsSP2Triangles(5, 6, 7, 0, 6, 8, 9, 0),
     gsSP2Triangles(0, 2, 3, 0, 9, 7, 6, 0),
-    gsSPMatrix(0x0D0001C0, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
+    gsSPMatrix(D_0D0001C0, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON),
     gsSPSetGeometryMode(G_LIGHTING),
     gsSPClearGeometryMode(G_TEXTURE_GEN | G_TEXTURE_GEN_LINEAR),
     gsSPVertex(&bunny_hood_verts[35], 5, 0),
-    gsSPMatrix(0x0B000000, G_MTX_NOPUSH | G_MTX_MUL | G_MTX_MODELVIEW),
+    gsSPMatrix(D_0B000000, G_MTX_NOPUSH | G_MTX_MUL | G_MTX_MODELVIEW),
     gsSPTexture(0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -417,12 +420,12 @@ Gfx bunny_hood_dlist[] = {
     gsSP2Triangles(23, 27, 24, 0, 25, 24, 28, 0),
     gsSP2Triangles(25, 29, 30, 0, 26, 27, 23, 0),
     gsSP2Triangles(28, 29, 25, 0, 30, 21, 25, 0),
-    gsSPMatrix(0x0D0001C0, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
+    gsSPMatrix(D_0D0001C0, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON),
     gsSPSetGeometryMode(G_LIGHTING),
     gsSPClearGeometryMode(G_TEXTURE_GEN | G_TEXTURE_GEN_LINEAR),
     gsSPVertex(&bunny_hood_verts[66], 5, 0),
-    gsSPMatrix(0x0B000040, G_MTX_NOPUSH | G_MTX_MUL | G_MTX_MODELVIEW),
+    gsSPMatrix(D_0B000040, G_MTX_NOPUSH | G_MTX_MUL | G_MTX_MODELVIEW),
     gsSPTexture(0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
