@@ -620,8 +620,10 @@
 80408978 bunny_hood_texture1
 80408B78 .byt:0148
 80408B78 deku_stick_dlist
-80408CC0 .byt:0240
-80408CC0 deku_stick_verts
+80408CC0 .byt:00D0
+80408CC0 deku_stick_verts2
+80408D90 .byt:0170
+80408D90 deku_stick_verts1
 80408F00 .byt:0014
 80408F00 extern_ctxt
 80408F14 .byt:0040
